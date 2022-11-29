@@ -29,7 +29,7 @@ BluetoothSerial SerialBT;
 
 #define battPIN  34
 #define donePIN  25
-String Ver = "0.2" ;
+String Ver = "0.1" ;
 String HOSTNAME = "";
 String deviceToken = "";
 String serverIP = "147.50.151.130"; // Your Server IP;
@@ -231,17 +231,17 @@ void sendViaNBIOT()
   json.concat("{\"Tn\":\"");
   json.concat(deviceToken);
 
-  json.concat("\",\"SO2\":");
+  json.concat("\",\"so2\":");
   json.concat(meter.SO2);
-  json.concat(",\"NO2\":");
+  json.concat(",\"no2\":");
   json.concat(meter.NO2);
-  json.concat(",\"CO\":");
+  json.concat(",\"co\":");
   json.concat(meter.CO);
-  json.concat(",\"O3\":");
+  json.concat(",\"o3\":");
   json.concat(meter.O3);
-  json.concat(",\"PM2_5\":");
+  json.concat(",\"pm2_5\":");
   json.concat(meter.PM2_5);
-  json.concat(",\"PM10\":");
+  json.concat(",\"pm10\":");
   json.concat(meter.PM10);
   json.concat(",\"temp\":");
   json.concat(meter.temp);
